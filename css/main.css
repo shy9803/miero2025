@@ -1,0 +1,332 @@
+@charset "utf-8";
+
+:root{
+  --color_w:#fff;
+}
+main{}
+
+/* 메인슬라이드 서식 */
+#mslide{
+  width:100%;height:95vh;
+  position:relative;
+  overflow:hidden;
+}
+#mslide div{
+  position:absolute;/* 가로크기 줄것 */
+  width:100%;
+}
+#mslide .slide1{z-index:3;}
+#mslide .slide2{z-index:2;}
+#mslide .slide3{z-index:1;}
+#mslide div img{width:100%;}
+
+/*sns 서식*/
+.sns{
+  position:absolute;
+  left:3%;top:64%;
+  z-index:100;
+}
+.sns i.fa-brands{
+  font-size:1.25rem; /* 20px */
+  color:var(--color_w);
+  padding:6px 8px;
+  border:1px solid var(--color_w);
+  transition:0.3s;
+}
+.sns  a:hover i.fa-brands{
+  color:#f36f21;
+  background:var(--color_w);
+}
+
+/* 좌, 우 버튼 서식 */
+#mslide .l_btn, #mslide .r_btn{
+  position:absolute;
+  bottom:20%;left:3%;
+  z-index:500;
+  background:var(--color_w);
+  padding:10px 6px;
+}
+#mslide .r_btn{left:6%;}
+
+/* 콘트롤 버튼 서식 */
+#mslide .c_btn{
+  position:absolute;
+	right:1.5%;top:47%;z-index:100;
+}
+#mslide .c_btn li{
+  width:14px;height:14px;
+  border-radius:50%;
+  background:var(--color_w);
+  margin-bottom:10px;
+}
+
+/* 해당 이미지가 보일 때 적용되는 콘트롤 버튼 서식 */
+.on{
+  background-color:#742406 !important;
+}
+
+/* 2. 뉴스 콘텐츠 서식 */
+#news{
+  width:1200px;margin:100px auto;
+  display:flex;
+  justify-content: space-between;
+}
+#news article:first-child{width:620px;}
+#news article:last-child{width:540px;}
+#news article h2{
+  font-size:32px;
+  font-weight:bold;
+  margin-bottom:20px;
+}
+#news article h2 span{
+  display:block;font-size:20px;
+}
+/* 목록기호 서식 */
+#news i.far{
+  color:#ff9d00;
+  padding-right:6px;
+  font-size:16px;
+}
+#news article ul{}
+#news article ul > li{
+  width:370px;
+  line-height:250%;
+  white-space: nowrap; /* 글자를 다음줄로 못넘기게 함 */
+  text-overflow: ellipsis; /* 생략기호 */
+  overflow:hidden; /* 영역을 벗어나면 숨기기 */
+}
+#news li a{font-size:16px;}
+
+/* 3. 탭콘텐츠 서식 */
+#tab_con{
+  background:#f1f1f1;
+  padding:100px 0px;
+}
+#tab_con h2{
+  font-size:32px;
+  padding:10px 0px;
+  font-weight:bold;
+}
+#tab_con > article{
+  position:relative;
+  width:1200px;height:500px;
+  margin:0 auto;
+  background-image:url('../images/mcon2_7.png');
+  background-repeat: no-repeat;
+  background-position:600px 150px;
+  background-size:550px;
+}
+/* 탭메뉴 목록 */
+#tab_con > article > ul{
+  width:650px;
+  display:flex;
+  position:relative; /* 부모요소 기준설정 */
+  margin-top:30px;
+}
+#tab_con ul li{margin-right:10px;}
+#tab_con ul li a{
+  background:#222;
+  color:#fff;
+  font-size:16px;
+  padding:10px 5px;
+}
+#tab_con ul li a:hover{
+  text-decoration: none;
+}
+#tab_con dl{line-height:160%;}
+#tab_con dl dt{
+  font-size:24px;
+	font-weight:bold;
+  padding-bottom:10px;
+}
+/* 탭메뉴 클릭시 a에서 적용할 서식 */
+.t_on{background:#f36f21 !important;}
+
+#tab_con .con, i.fa-caret-down{display:none;}
+#tab_con .con1{display:block;}
+#tab_con .con{
+  position:absolute;
+  top:50px;left:0px;
+  width:100%;
+}
+#tab_con .con img{width:80%;
+}
+
+/* 4. 제품 소개 */
+#product {
+  width: 100%;
+  background: #ffc845;
+  padding: 100px 0;
+}
+#product article {
+  width: 1200px;
+  margin: 0 auto;
+}
+#product h2 {
+  font-size: 32px;
+  padding: 10px 0;
+  font-weight: bold;
+}
+#product ul {
+  display: flex;
+  justify-content: space-between;
+}
+#product ul li {
+  width: 31%; /*400px=33.3% (=여백 제외한 값)*/
+}
+#product ul li img {
+  width: 100%;
+}
+#product ul li h3 {
+  font-size: 24px;
+  border-bottom: 1px solid #9f5e05;
+  height: 75px;
+  padding-top: 30px;
+}
+#product ul li p {
+  padding-top: 10px;
+  font-size: 14px;
+  line-height: 22px;
+  color: #805a28;
+}
+
+/* 5. 이벤트 슬라이드 */
+#event {
+  padding: 100px 0;
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+#event h2 {
+  font-size: 32px;
+  padding: 20px 0;
+  font-weight: bold;
+}
+.e_slide {
+  /* width: 1200px;
+  margin: 0 auto; */
+  /* border: 3px solid #f00; */
+  overflow: hidden;
+}
+.es_wrap {
+  display: flex;
+  width: 3600px; /* 1200px*3 */
+}
+.es_wrap > div {
+  width: 1200px;
+}
+.es_wrap > div > a {
+  display: flex;
+}
+.es_wrap > div > a:hover {
+  text-decoration: none;
+}
+
+.e_txt {
+  padding: 30px 0 0 40px;
+}
+.e_txt span.e_on {
+  background: #f36f21; /*var(--main_color);*/
+  color: var(--color_w);
+}
+.e_txt span {
+  background: #e4e4e4;
+  padding: 4px 8px;
+}
+.e_txt h3 {
+  font-size: 18px;
+  line-height: 60px;
+}
+.e_txt p {
+  font-style: 16px;
+}
+
+#event i.fas {
+  position: absolute;
+  top: 272px;
+  font-size: 30px;
+  padding: 5px 12px;
+  border-radius: 50%;
+  border: 1px solid #333;
+}
+#event i.fa-angle-left {
+  left: -55px;
+}
+#event i.fa-angle-right {
+  right: -55px;
+}
+
+/* 갤러리 */
+#gallery{
+  background-color: #f36f21;
+  padding: 100px 0;
+}
+#gallery > h2{
+  padding:0px 0px 20px 0px;
+  font-size:32px;
+  color:#ffffff;
+}
+#gallery > h2, .grid_gallery{
+  width:1200px;margin:0 auto;
+}
+
+.grid_gallery{
+  display:grid;
+  grid-gap:20px;
+  padding:20px;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(3, 270px);
+  grid-template-areas:
+    "g01 g02 g03"
+    "g04 g02 g05"
+    "g06 g07 g08";
+}
+.grid_gallery img{width:100%;}
+.grid_gallery figure{overflow: hidden;}
+.grid_gallery figure:hover > figcaption{
+  top:-80px;
+}
+.grid_gallery figure:nth-child(2):hover > figcaption{
+  top:-90px;
+}
+.grid_gallery figure:first-child{grid-area:g01;}
+.grid_gallery figure:nth-child(2){
+  /* grid-area: 1/2/3/3;행번호/열번호 */
+  grid-area:g02;
+}
+.grid_gallery figure:nth-child(3){grid-area:g03;}
+.grid_gallery figure:nth-child(4){grid-area:g04;}
+.grid_gallery figure:nth-child(5){grid-area:g05;}
+.grid_gallery figure:nth-child(6){grid-area:g06;}
+.grid_gallery figure:nth-child(7){grid-area:g07;}
+.grid_gallery figure:last-child{
+  grid-area:g08;
+}
+
+/* 캡션서식 */
+.grid_gallery figcaption{
+  height:80px;
+  transition: 0.5s; /* 전환속성 */
+  background:#111111;
+  position:relative;top:0px;
+}
+
+.grid_gallery figcaption h3{
+  font-size: 20px;
+  font-weight: bold;
+  color: #f36f21;
+  padding: 10px 0px 5px 20px;
+}
+.grid_gallery figcaption p{
+  font-size:13px;
+  color:#fff;
+  padding:5px 0px 0px 20px;
+}
+.grid_gallery figcaption span{
+  font-size:15px;
+  color:#ffffff;
+  border:1px solid #ffffff;
+  padding:5px;
+  position:absolute;
+  right:20px;bottom:15px;
+}

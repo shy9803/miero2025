@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+/* base */
+/* 폰트, 크기, 색상, 링크 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+:root{
+  --base_txt_color:#333;
+  --base_font_size:15px;
+}
+body {
+  font-family: 'Noto Sans KR', "맑은 고딕",arial, sans-serif;
+  font-size:var(--base_font_size);
+  color:var(--base_txt_color); 
+} 
+a{
+  font-size:var(--base_font_size);
+  color:var(--base_txt_color);
+  text-decoration: none;
+}
+a:hover{text-decoration:underline;}
+iframe{border:none;}

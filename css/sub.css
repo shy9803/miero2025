@@ -1,0 +1,40 @@
+@charset 'utf-8';
+
+:root{
+  --bg_color_gray:#eeeeee;
+}
+
+/* 서브페이지 서식 */
+.title_back{
+  background:url('http://design2012.dothome.co.kr/miero2025/images/sub_bg1.jpg');
+  background-position:0px -240px;
+  height:250px;
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+
+main nav{
+  height:50px;
+  background:var(--bg_color_gray);
+}
+main .con article{
+  width:1200px;
+  margin:0 auto;
+}
+main .con h2{display:none;}
+.con nav ul{
+  width:300px;
+  margin:0 auto;
+  display:flex;
+  justify-content: center;
+  padding-top:13px;
+}
+.con nav ul li{
+  line-height:22px;
+  padding:0px 10px;
+  border-right:1px solid #969696;
+}
+.con nav ul li:last-child{border:none;}
+.con nav ul li:first-child a{
+  color:#f36f21;
+}
