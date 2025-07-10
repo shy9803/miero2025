@@ -82,6 +82,9 @@ main {overflow: hidden;}
 #news article h2 span{
   display:block;font-size:20px;
 }
+
+#news iframe {max-width: 635px; max-height: 357px; width: 100%; height: 100%;}
+
 /* 목록기호 서식 */
 #news i.far{
   color:#ff9d00;
@@ -358,7 +361,7 @@ main {overflow: hidden;}
     width: 50%;
     padding-right: 15px;
   }
-  #news article:first-child iframe {width: 540px;}
+  #news article:first-child iframe {max-width: 430px;}
   #news article:last-child {width: 42%;}
 
   #tab_con ul li a {padding: 12px 14px;}
@@ -380,12 +383,12 @@ main {overflow: hidden;}
   #mslide {
     min-height: 33vh;
     height: 100%;
-    overflow: unset;
+    /* overflow: unset; */
   }
   #mslide .l_btn, #mslide .r_btn {bottom: 6%;}
   #mslide .r_btn {left: 10%;}
 
-  #news, #tab_con, #product, #event, #gallery {padding: 45px 15px; box-sizing: border-box;}
+  #news, #tab_con, #product, #event, #gallery {padding: 10px 15px; box-sizing: border-box;}
   #news, #tab_con > article, #product > article, #event, .es_wrap > div, #gallery > h2, .grid_gallery {
     width: 100%;
   }
@@ -458,6 +461,9 @@ main {overflow: hidden;}
   }
   #news article:first-child, #news article:last-child {
     width: 95%;
+  }
+  #news article:first-child {
+    margin-bottom: 85px;
   }
 
   /* 3. tab 콘텐츠 서식 */
