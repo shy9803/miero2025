@@ -338,7 +338,7 @@ main {overflow: hidden;}
 /* iPad Pro */
 @media screen and (max-width:1024px) and (min-width: 821px) {
   #mslide {
-    min-height: 36vh;
+    min-height: 39vh;
     height: 100%;
     overflow: unset;
   }
@@ -349,7 +349,7 @@ main {overflow: hidden;}
     left: 9%;
   }
 
-  #news, #tab_con, #product, #event, #gallery {padding: 100px 15px; box-sizing: border-box;}
+  #news, #tab_con, #product, #event, #gallery {padding: 45px 15px; box-sizing: border-box;}
   #news, #tab_con > article, #product > article, #event, .es_wrap > div, #gallery > h2, .grid_gallery {
     width: 100%;
   }
@@ -358,7 +358,7 @@ main {overflow: hidden;}
     padding-right: 15px;
   }
   #news article:first-child iframe {width: 540px;}
-  #news article:last-child {width: 45%;}
+  #news article:last-child {width: 42%;}
 
   #tab_con ul li a {padding: 12px 14px;}
 
@@ -384,7 +384,7 @@ main {overflow: hidden;}
   #mslide .l_btn, #mslide .r_btn {bottom: 6%;}
   #mslide .r_btn {left: 10%;}
 
-  #news, #tab_con, #product, #event, #gallery {padding: 100px 15px; box-sizing: border-box;}
+  #news, #tab_con, #product, #event, #gallery {padding: 45px 15px; box-sizing: border-box;}
   #news, #tab_con > article, #product > article, #event, .es_wrap > div, #gallery > h2, .grid_gallery {
     width: 100%;
   }
@@ -393,11 +393,12 @@ main {overflow: hidden;}
 
   #news article:first-child {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
   #news article:last-child {width: 100%;}
 
   #tab_con > article {height: 50vh; background-position: 0 270px;}
+  #tab_con ul li a {padding: 12px 14px;}
 
   #product ul {display: block;}
   #product ul li {width: 100%;}
