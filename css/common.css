@@ -92,9 +92,6 @@ header h1 img{width:100%;}
 .gnb li:nth-child(2) .sub { width:200px; left:-68px; }
 .gnb li:nth-child(4) .sub { width:115px;}
 
-
-main article{}
-
 /* 푸터서식 (완성하기) */
 footer{
   width:100%;
@@ -152,4 +149,87 @@ address{
   font-size:13px;
   padding-right:3%;
   line-height:70px;
+}
+
+/* tablet, mobile 해상도에서만 적용하는 header, footer 서식 */
+@media screen and (max-width: 1024px) {
+  /* header 서식 */
+  header > h1{
+    /* width:200px; */
+    top:30px;
+  }
+  #toggle{
+    display:block;
+  }
+
+  .gnb {
+    background: var(--color_w);
+    top:90px;
+    width: 94%;
+    display: none;
+  }
+  .gnb > ul {
+    flex-direction: column;
+  }
+  .gnb > ul > li {
+    text-align: center;
+    margin: 0;
+  }
+  .gnb > ul > li > a {
+    font-size: 0.85rem;
+    color: var(--base_txt_color);
+  }
+  .gnb > ul > li:last-child > a {
+    color: var(--txt_color1);
+    display: block;
+    background: var(--main-color);
+    border: none;
+  }
+  .gnb > ul > li:last-child > a:hover {
+    border: none;
+    background: var(--base_txt_color);
+    color: var(--txt_color1);
+  }
+
+  .sub {
+    box-sizing: border-box;
+    background: #ccc;
+    left: 0 !important;
+    z-index: 100;
+    width: 100% !important;
+    /* position: static; */
+  }
+
+  /* footer 서식 */
+  .f_inner > nav {
+    width: 90%;
+    /* margin: 0 auto; */
+    flex-wrap: wrap;
+    /* justify-content:space-between;
+    padding:50px 0px; */
+  }
+  .f_inner dl {
+    width: 50%;
+  }
+  .f_inner dl:last-child {
+    width: 100%;
+  }
+
+  .f_bottom {
+    display: block;
+    /* justify-content: space-between; */
+    height: 90px;
+    text-align: center;
+  }
+  footer h2 {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 0 0;
+  }
+  footer h2 img {
+    width: 100px;
+  }
+  address {
+    line-height: 50px;
+  }
 }

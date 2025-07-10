@@ -3,7 +3,6 @@
 :root{
   --color_w:#fff;
 }
-main{}
 
 /* 메인슬라이드 서식 */
 #mslide{
@@ -87,7 +86,7 @@ main{}
   padding-right:6px;
   font-size:16px;
 }
-#news article ul{}
+
 #news article ul > li{
   width:370px;
   line-height:250%;
@@ -133,7 +132,8 @@ main{}
 #tab_con ul li a:hover{
   text-decoration: none;
 }
-#tab_con dl{line-height:160%;}
+#tab_con dl{width: 100%;
+  line-height:160%;}
 #tab_con dl dt{
   font-size:24px;
 	font-weight:bold;
@@ -282,13 +282,14 @@ main{}
     "g06 g07 g08";
 }
 .grid_gallery img{width:100%;}
-.grid_gallery figure{overflow: hidden;}
+.grid_gallery figure{
+  overflow: hidden;
+  position: relative;
+}
 .grid_gallery figure:hover > figcaption{
-  top:-80px;
+  bottom: 0px;
 }
-.grid_gallery figure:nth-child(2):hover > figcaption{
-  top:-90px;
-}
+
 .grid_gallery figure:first-child{grid-area:g01;}
 .grid_gallery figure:nth-child(2){
   /* grid-area: 1/2/3/3;행번호/열번호 */
@@ -308,7 +309,8 @@ main{}
   height:80px;
   transition: 0.5s; /* 전환속성 */
   background:#111111;
-  position:relative;top:0px;
+  position:absolute;bottom: -80px;
+  width: 100%;
 }
 
 .grid_gallery figcaption h3{
@@ -329,4 +331,172 @@ main{}
   padding:5px;
   position:absolute;
   right:20px;bottom:15px;
+}
+
+
+/* tablet 해상도일 경우 서식 */
+/* iPad Pro */
+@media screen and (max-width:1024px) and (min-width: 821px) {
+  #mslide {
+    min-height: 36vh;
+    height: 100%;
+    overflow: unset;
+  }
+  #mslide .l_btn, #mslide .r_btn {
+    bottom: 15%;
+  }
+  #mslide .r_btn {
+    left: 9%;
+  }
+
+  #news, #tab_con > article, #product > article, #event, .es_wrap > div, #gallery > h2, .grid_gallery {
+    width: 100%;
+  }
+  #news article:first-child, #news article:last-child {
+    width: 95%;
+  }
+}
+/* iPad Air */
+@media screen and (max-width:820px) and (min-width: 768px) {
+  
+}
+
+/* mobile 해상도일 경우 서식 */
+@media screen and (max-width: 767px) {
+  /* pc버전에서 가로 1200px 설정했던 값을 모두 100%로 변경해야. */
+  #news, #tab_con > article, #product > article, #event, .es_wrap > div, #gallery > h2, .grid_gallery {
+    width: 100%;
+  }
+  #news h2, #tab_con h2, #product article h2, #event h2, #gallery > h2 {
+    text-align: center;
+  }
+  #tab_con, #product, #event, #gallery {
+    padding: 50px 0;
+  }
+
+  /* 1. slide 서식 */
+  #mslide {
+    height: 55vh;
+  }
+  #mslide .slide img {
+    width: 250%;
+  }
+  #mslide .l_btn, #mslide .r_btn {
+    bottom: 15%;
+  }
+  #mslide .r_btn {
+    left: 16%;
+  }
+
+  /* 2. news 콘텐츠 서식 */
+  #news {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px auto;
+  }
+  iframe {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  #news article:first-child, #news article:last-child {
+    width: 95%;
+  }
+
+  /* 3. tab 콘텐츠 서식 */
+  #tab_con > article > ul {
+    width: 90%;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #tab_con ul li {
+    width: 100%;
+  }
+  #tab_con ul li a {
+    font-size: 1rem;
+    padding: 10px 0.5%;
+    display: block;
+    text-indent: 10px;
+  }
+
+  i.fa-caret-down{
+    display:block;
+    float: right;
+    transform: translateX(-10px);
+    color: #f36f21; /* var(--main_color) */
+  }
+  .t_on > i.fas{
+    color:var(--color_w);
+    transform: rotate(180deg);
+  }
+
+  #tab_con .con {
+    top: 138px;
+  }
+
+  /* 4. 제품소개 콘텐츠 서식 */
+  #product ul {
+    flex-direction: column;
+  }
+  #product ul li {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #product ul li img {
+    min-width: 300px;
+  }
+  #product ul li h3, #product ul li p {
+    text-align: left;
+  }
+  #product ul li h3 {
+    font-size: 1.5rem;
+    padding-top: 15px;
+    height: 60px;
+  }
+  #product ul li p {
+    font-size: 0.875rem;
+  }
+
+  /* 5. 이벤트 슬라이드 콘텐츠 서식 */
+  .es_wrap {
+    width: 300%;
+  }
+  .es_wrap > div {
+    width: 100%;
+  }
+  .es_wrap > div > a {
+    display: inline;
+  }
+  .es_wrap > div img {
+    width: 100%;
+  }
+  .e_txt {
+    padding: 30px 0 0 5px;
+  }
+
+  #event i.fas {
+    top: 34%;
+  }
+  #event i.fa-angle-left {
+    left: 5px;
+  }
+  #event i.fa-angle-right {
+    right: 5px;
+  }
+
+  /* 6. 갤러리 콘텐츠 서식 */
+  .grid_gallery {
+    display: block;
+    padding: 0 0.8rem;
+    box-sizing: border-box;
+  }
+  figure {
+    overflow: hidden;
+  }
+  .grid_gallery figcaption {
+    transition: none;
+    bottom: 0;
+    z-index: 100;
+  }
 }
