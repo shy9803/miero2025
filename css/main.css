@@ -5,6 +5,8 @@
 }
 
 /* 메인슬라이드 서식 */
+main {overflow: hidden;}
+
 #mslide{
   width:100%;height:95vh;
   position:relative;
@@ -203,9 +205,6 @@
   font-weight: bold;
 }
 .e_slide {
-  /* width: 1200px;
-  margin: 0 auto; */
-  /* border: 3px solid #f00; */
   overflow: hidden;
 }
 .es_wrap {
@@ -280,6 +279,7 @@
     "g01 g02 g03"
     "g04 g02 g05"
     "g06 g07 g08";
+  box-sizing: border-box;
 }
 .grid_gallery img{width:100%;}
 .grid_gallery figure{
@@ -349,16 +349,72 @@
     left: 9%;
   }
 
+  #news, #tab_con, #product, #event, #gallery {padding: 100px 15px; box-sizing: border-box;}
   #news, #tab_con > article, #product > article, #event, .es_wrap > div, #gallery > h2, .grid_gallery {
     width: 100%;
   }
-  #news article:first-child, #news article:last-child {
-    width: 95%;
+  #news article:first-child {
+    width: 50%;
+    padding-right: 15px;
   }
+  #news article:first-child iframe {width: 540px;}
+  #news article:last-child {width: 45%;}
+
+  #tab_con ul li a {padding: 12px 14px;}
+
+  .es_wrap {width: 300%;}
+  #event i.fa-angle-left {left: 15px;}
+  #event i.fa-angle-right {right: 15px;}
+
+  .grid_gallery figure{
+    overflow: visible;
+  }
+  .grid_gallery figcaption{
+    position: static;
+  }
+  .grid_gallery figure:nth-child(2) figcaption a span:last-child{bottom: 70px;}
 }
 /* iPad Air */
 @media screen and (max-width:820px) and (min-width: 768px) {
+  #mslide {
+    min-height: 33vh;
+    height: 100%;
+    overflow: unset;
+  }
+  #mslide .l_btn, #mslide .r_btn {bottom: 6%;}
+  #mslide .r_btn {left: 10%;}
+
+  #news, #tab_con, #product, #event, #gallery {padding: 100px 15px; box-sizing: border-box;}
+  #news, #tab_con > article, #product > article, #event, .es_wrap > div, #gallery > h2, .grid_gallery {
+    width: 100%;
+  }
+
+  #news {display: block;}
+
+  #news article:first-child {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  #news article:last-child {width: 100%;}
+
+  #tab_con > article {height: 50vh; background-position: 0 270px;}
+
+  #product ul {display: block;}
+  #product ul li {width: 100%;}
+
+  .es_wrap {width: 300%;}
+  .es_wrap > div > a {display: block;}
+  #event i.fa-angle-left {left: 15px;}
+  #event i.fa-angle-right {right: 15px;}
   
+  .grid_gallery figure{
+    overflow: visible;
+  }
+  .grid_gallery figcaption{
+    position: static;
+  }
+  .grid_gallery figcaption span {bottom: 68px;}
+  .grid_gallery figure:nth-child(2) figcaption a span:last-child{bottom: 176px;}
 }
 
 /* mobile 해상도일 경우 서식 */
